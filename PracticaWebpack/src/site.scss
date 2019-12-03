@@ -1,0 +1,11 @@
+$color-background: cadetblue;
+$color-greet-text: red;
+
+.colorBackground {
+    background-color: $color-background;
+}
+
+.textoSaludo {
+    color: $color-greet-text;
+
+}
