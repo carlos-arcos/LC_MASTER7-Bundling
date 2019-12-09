@@ -1,12 +1,12 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+/* const MiniCssExtractPlugin = require('mini-css-extract-plugin'); */
 const path = require('path');
 const basePath = __dirname;
 
 module.exports = {
    context: path.join(basePath, "src"),
    resolve: {
-      extensions: [".js", ".ts", ".tsx"]
+      extensions: [".js", ".jsx", ".ts", ".tsx"]
    },
    entry: {
       app: './index.tsx',
@@ -24,10 +24,10 @@ module.exports = {
          }
       }
    },
-   output: {
+   /* output: {
       filename: "[name].[chunkhash].js"
    },
-   devtool: "inline-source-map",
+   devtool: "inline-source-map", */
    module: {
       rules: [
          {
@@ -35,7 +35,7 @@ module.exports = {
             exclude: /node_modules/,
             loader: "babel-loader"
          },
-         {
+         /* {
             test: /\.scss$/,
             exclude: /node_modules/,
             use: [
@@ -53,7 +53,7 @@ module.exports = {
             test: /\.css$/,
             exclude: /node_modules/,   
             use: [MiniCssExtractPlugin.loader, "css-loader"]
-         },
+         }, */
          {
             test: /\.(png|jpg)$/,
             exclude: /node_modules/,
@@ -82,10 +82,10 @@ module.exports = {
          //Fichero origen
          template: 'index.html'
       }),
-      new MiniCssExtractPlugin ({
+      /* new MiniCssExtractPlugin ({
          filename: "[name].css",
          chunkFilename: "[id]. [chunkhash].css"
-     })
+     }) */
    ],
    devServer: {
       port: 8088

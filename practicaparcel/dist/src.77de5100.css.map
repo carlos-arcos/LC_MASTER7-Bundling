@@ -1,0 +1,1 @@
+{"version":3,"sources":["site.scss"],"names":[],"mappings":"AAEA;EACI,kBAHgB","file":"src.77de5100.css","sourceRoot":"..\\src","sourcesContent":["$color-marroncillo: burlywood;\r\n\r\n.colorFondo {\r\n    background-color: $color-marroncillo;\r\n}"]}
